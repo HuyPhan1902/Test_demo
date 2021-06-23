@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Bài tập JavaScript</title>
+        <meta http-equiv="Content_Type" content="text/html" charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>Nhập tiêu đề</h1>
+        <input type="text" value="" id="title" />
+        <input type="button" value="Button" onclick="Show()" />
+        <div id="result"></div>
+        <script language="javascript">
+            function Show()
+            {
+                var text = document.getElementById('title').value;
+                var result = document.getElementById('result');
+                if(text=="") alert("Vui lòng nhập tiêu đề");
+                else
+                {
+                    var html = '<div style="background: blue; padding: 20px; color: white; margin: 5px">' + text + '</div>';
+                    result.insertAdjacentHTML("afterbegin", html);
+                } 
+            }
+        </script>
+    </body>
+</html>
